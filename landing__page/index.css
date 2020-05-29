@@ -95,7 +95,7 @@ p {
 }
 
 .header-extradiv {
-  padding: 100px;
+  padding: 100px 20px;
 }
 
 .extradiv {
@@ -129,7 +129,7 @@ p {
 
 .contactus {
   margin-top: 20px;
-  padding: 90px;
+  padding: 90px 0;
   /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%, 0 0); */
   background-image: linear-gradient(-135deg, rgba(200, 80, 192, .5), rgba(200, 80, 192, .8), rgba(200, 80, 192, .5));
 }
@@ -169,14 +169,25 @@ p {
   box-shadow: 0 2rem 2rem rgba(0, 0, 0, .3);
 }
 
-/* .aboutus {
-  margin-top: 20px;
-  padding: 90px;
-  background-image: linear-gradient(to right bottom, rgba(65, 88, 208, .8), rgba(65, 88, 208, .2), rgba(65, 88, 208, .8));
-} */
+/* 
+.aboutus {
+  background-image: linear-gradient(45deg, rgba(69, 104, 220, .5), rgba(200, 80, 192, .8), rgba(69, 104, 220, .5));
+  padding: 60px 0;
+  /* margin-bottom: 40px; }*/
+.aboutus__para {
+  font-size: 20px;
+  font-weight: 300;
+}
 
+.aboutus__span {
+  font-weight: 400;
+  font-size: 25px;
+  display: block;
+  /* text-align: center; */
+  padding: 8px 0;
+}
 
-#myBtn {
+ #myBtn {
   display: none;
   position: fixed;
   z-index: 20;
