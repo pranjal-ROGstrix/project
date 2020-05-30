@@ -1,17 +1,18 @@
-(function () {
+(function() {
 
     var SimpleApplicationApp = angular.module("SimpleApplicationApp", []);
 
-    SimpleApplicationApp.controller('RegistrationController', function ($scope) {
-        
+    SimpleApplicationApp.controller('RegistrationController', function() {
+
+        var registration = this;
         $('#form__span__error__name').hide();
         $('#form__span__error__libid').hide();
         $('#form__span__error__email').hide();
         $('#form__span__error__confirmpassword').hide();
 
-        $scope.nameValidation = function () {
-            let name = this.registration.name;
-
+        registration.nameValidation = function() {
+            let name = registration.name;
+            console.log(name)
             if (!isNaN(name)) {
                 $('#form__span__error__name').html("please enter a valid name");
                 $('#form__span__error__name').show();
@@ -30,26 +31,24 @@
                 return true;
             }
         }
-        $scope.libidValidation = function () {
-            let libid = this.registration.libid;
-            if (libid.length != 10 ) {
+        registration.libidValidation = function() {
+            let libid = registration.libid;
+            if (libid.length != 10) {
                 $('#form__span__error__libid').html("please enter a valid libid");
                 $('#form__span__error__libid').show();
                 $('#form__libid').addClass("error__border");
                 $('#form__libid').focus();
                 return false;
-            }
-            else if (isNaN(libid.substring(0, 4)) || !isNaN(libid.substring(4, 6)) || isNaN(libid.substring(6, 10))){
+            } else if (isNaN(libid.substring(0, 4)) || !isNaN(libid.substring(4, 6)) || isNaN(libid.substring(6, 10))) {
                 console.log(isNaN(libid.slice(0, 4)))
                 console.log(libid.slice(0, 4))
                 $('#form__span__error__libid').html("please enter a valid libid");
                 $('#form__span__error__libid').show();
                 $('#form__libid').addClass("error__border");
                 $('#form__libid').focus();
-                
+
                 return false;
-            }
-            else {
+            } else {
                 $('#form__span__error__libid').hide();
                 $('#form__libid').removeClass('error__border')
                 $('#form__libid').addClass('border-success');
@@ -58,11 +57,9 @@
                 return true;
             }
         }
-        $scope.confirmpasswordValidation = function () {
-            let confirmpassword = this.registration.confirmPassword;
-            let password = this.registration.password;
-            console.log(confirmpassword)
-            console.log(password)
+        registration.confirmpasswordValidation = function() {
+            let confirmpassword = registration.confirmPassword;
+            let password = registration.password;
             if (password != confirmpassword) {
                 {
                     $('#form__span__error__confirmpassword').show();
