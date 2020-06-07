@@ -1,4 +1,4 @@
-[
+{"users":[
   {
     "id": 7,
     "email": "michael.lawson@reqres.in",
@@ -35,3 +35,4 @@
     "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/mrmoiree/128.jpg"
   }
 ]
+}
